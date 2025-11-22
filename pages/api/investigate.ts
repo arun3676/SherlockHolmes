@@ -1,5 +1,4 @@
 import { NextApiRequest, NextApiResponse } from 'next'
-import { Sandbox } from 'e2b'
 import Groq from 'groq-sdk' // <--- CHANGED FROM OPENAI
 import { Client } from '@modelcontextprotocol/sdk/client/index.js'
 import { StreamableHTTPClientTransport } from '@modelcontextprotocol/sdk/client/streamableHttp.js'
@@ -50,6 +49,9 @@ export default async function handler(
     // Parse price
     const askingPrice = parseInt(price.replace(/[$,\s]/g, '')) || 1200000
     const estimatedOffer = Math.floor(askingPrice * 0.9)
+
+    // Dynamically import E2B to avoid ESM/CommonJS compatibility issues in serverless
+    const { Sandbox } = await import('e2b')
 
     // Create sandbox with MCP servers from Docker Hub
     const sbx = await Sandbox.create({
