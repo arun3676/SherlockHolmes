@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.log-box {
+  background-color: #0e1117;
+  color: #00ff00;
+  font-family: 'Courier New', monospace;
+  padding: 16px;
+  border-radius: 8px;
+  font-size: 12px;
+  height: 300px;
+  overflow-y: auto;
+  border: 1px solid #333;
+}
+
+.stButton button {
+  background-color: #FF4B4B;
+  color: white;
+  border-radius: 8px;
+  height: 48px;
+  font-weight: 600;
+  transition: all 0.2s;
+}
+
+.stButton button:hover {
+  background-color: #E53935;
+  transform: translateY(-1px);
+}
