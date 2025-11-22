@@ -3,7 +3,7 @@ const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
   experimental: {
-    serverComponentsExternalPackages: ['e2b'],
+    serverComponentsExternalPackages: ['e2b', 'chalk'],
   },
 }
 
