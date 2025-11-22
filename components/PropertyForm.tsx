@@ -102,14 +102,16 @@ export default function PropertyForm({ onSubmit, loading, compact }: PropertyFor
             disabled={loading}
             onMouseEnter={(e) => {
               if (!loading) {
-                e.target.style.borderColor = '#2563eb'
-                e.target.style.boxShadow = '0 0 0 3px rgba(37, 99, 235, 0.1)'
+                const target = e.target as HTMLInputElement
+                target.style.borderColor = '#2563eb'
+                target.style.boxShadow = '0 0 0 3px rgba(37, 99, 235, 0.1)'
               }
             }}
             onMouseLeave={(e) => {
               if (!loading) {
-                e.target.style.borderColor = '#e5e7eb'
-                e.target.style.boxShadow = 'none'
+                const target = e.target as HTMLInputElement
+                target.style.borderColor = '#e5e7eb'
+                target.style.boxShadow = 'none'
               }
             }}
           />
@@ -128,14 +130,16 @@ export default function PropertyForm({ onSubmit, loading, compact }: PropertyFor
             disabled={loading}
             onMouseEnter={(e) => {
               if (!loading) {
-                e.target.style.borderColor = '#2563eb'
-                e.target.style.boxShadow = '0 0 0 3px rgba(37, 99, 235, 0.1)'
+                const target = e.target as HTMLInputElement
+                target.style.borderColor = '#2563eb'
+                target.style.boxShadow = '0 0 0 3px rgba(37, 99, 235, 0.1)'
               }
             }}
             onMouseLeave={(e) => {
               if (!loading) {
-                e.target.style.borderColor = '#e5e7eb'
-                e.target.style.boxShadow = 'none'
+                const target = e.target as HTMLInputElement
+                target.style.borderColor = '#e5e7eb'
+                target.style.boxShadow = 'none'
               }
             }}
           />
